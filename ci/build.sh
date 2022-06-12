@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # A simple script to build and install ETISS in ./build_dir
 
