@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM 1atabey1/riscv-ubuntu-toolchain
 
 LABEL maintainer="Rafael Stahl"
 LABEL version="1.0"
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   xz-utils \
   bzip2 zip \
   git ssh \
-  python-dev python-pip python-setuptools \
+  python3-dev python3-pip python3-setuptools \
   openjdk-8-jre \
   texlive-latex-base \
   graphviz \
@@ -34,7 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
    $(lsb_release -cs) \
    stable" && \
   apt-get update && \
-  apt-get install -y docker-ce && \
+  apt-get install -y docker-ce unzip && \
   apt-get remove -y python-pip python-setuptools && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -57,6 +57,5 @@ RUN wget http://www.accellera.org/images/downloads/standards/systemc/systemc-${S
   make -j$(nproc) install && \
   cd ../.. && \
   rm -rf systemc-${SYSTEMC_VER} && rm systemc-${SYSTEMC_VER}.gz
-
 
 ENV LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"

@@ -72,8 +72,8 @@ if __name__ == '__main__':
 		disableGDB = False
 
 
-	SIM_DIR = "../build_dir/installed/examples/bare_etiss_processor/"
-	SW_DIR = "../build_dir/installed/examples/SW/"
+	SIM_DIR = "/installed/bin/"
+	SW_DIR = "/installed/examples/SW/"
 
 	PLUGIN_DIR = "./plugins"
 	# kwargs is the argument dict which will be passed to all createPlugins() function

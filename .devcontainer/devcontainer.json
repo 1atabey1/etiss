@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/cpp
 {
-    "name": "C++",
+    "name": "ETISS",
     "build": {
         "dockerfile": "../ci/Dockerfile"
     },
@@ -18,7 +18,8 @@
 		"eamodio.gitlens",
 		"deerawan.vscode-whitespacer",
 		"aaron-bond.better-comments",
-		"augustocdias.tasks-shell-input"
+		"augustocdias.tasks-shell-input",
+		"ms-vscode.cmake-tools"
 	]
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
